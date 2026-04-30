@@ -1,0 +1,43 @@
+/* Analytics Panel Styles */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background: #f0faf3;
+  border-radius: 14px;
+  border: 1.5px solid #b7e4c7;
+  text-align: center;
+  min-height: 100px;
+}
+
+.stat-card.wide {
+  grid-column: span 2;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b4332;
+}
+
+.stat-card.wide .stat-value {
+  font-size: 1.4rem;
+}

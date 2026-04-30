@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechFest 2026 — Organizer Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <span class="topbar-title">TechFest 2026</span>
+    <span class="topbar-user" id="topbarUser"></span>
+  </header>
+
+  <main class="shell">
+
+    <nav class="tab-bar">
+      <button class="tab active" data-target="teams">Teams</button>
+      <button class="tab" data-target="analytics">Analytics</button>
+      <button class="tab" data-target="volunteers">Volunteers</button>
+    </nav>
+
+    <!-- TEAMS PANEL -->
+    <section id="teams" class="panel">
+      <h2><i>Team Registrations</i></h2>
+      <div class="toolbar">
+        <input id="searchInput" type="text" placeholder="Search by name or category">
+        <button id="searchBtn">Search</button>
+        <button id="approveBtn" class="btn-approve">Approve First Pending</button>
+      </div>
+      <p id="summary" class="summary-text"></p>
+      <ul id="teamList" class="team-list"></ul>
+      <p id="status" class="status-msg"></p>
+    </section>
+
+    <!-- ANALYTICS PANEL -->
+    <section id="analytics" class="panel hidden">
+      <h2>Dashboard Analytics</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">Total Teams</span>
+          <span class="stat-value" id="stat-total">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Approved</span>
+          <span class="stat-value" id="stat-approved">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Pending</span>
+          <span class="stat-value" id="stat-pending">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Rejected</span>
+          <span class="stat-value" id="stat-rejected">—</span>
+        </div>
+        <div class="stat-card wide">
+          <span class="stat-label">Approval Rate</span>
+          <span class="stat-value" id="stat-approval-rate">—</span>
+        </div>
+        <div class="stat-card wide">
+          <span class="stat-label">Rejection Rate</span>
+          <span class="stat-value" id="stat-rejection-rate">—</span>
+        </div>
+        <div class="stat-card wide">
+          <span class="stat-label">Top Category</span>
+          <span class="stat-value" id="stat-top-category">—</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUNTEERS PANEL -->
+    <section id="volunteers" class="panel hidden">
+      <h2>Volunteer Management</h2>
+      <button id="assignBtn" class="btn-approve">Assign Volunteers to Approved Teams</button>
+      <p id="volunteerStatus" class="status-msg"></p>
+      <ul id="volunteerList" class="volunteer-list"></ul>
+    </section>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="auth.js"></script>
+  <script src="analytics.js"></script>
+  <script src="volunteers.js"></script>
+  <script src="teams.js"></script>
+  <script src="router.js"></script>
+  <script>
+    document.getElementById("topbarUser").textContent = getCurrentUser().name;
+  </script>
+
+</body>
+</html>
