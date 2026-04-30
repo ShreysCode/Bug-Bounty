@@ -1,0 +1,12 @@
+{
+  "event": {
+    "name": "TechFest 2026"
+  },
+  "data": {
+    "volunteer_file": "volunteers.json",
+    "slot_file": "slots.csv"
+  },
+  "rules": {
+    "min_experience": 1
+  }
+}

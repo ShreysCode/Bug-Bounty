@@ -1,0 +1,8 @@
+{
+  "volunteers": [
+    { "name": "Aisha", "preferred_zone": "helpdesk", "experience": 2 },
+    { "name": "Rohan", "preferred_zone": "stage", "experience": 0 },
+    { "name": "Kabir", "preferred_zone": "gaming", "experience": 3 },
+    { "name": "Meera", "preferred_zone": "helpdesk", "experience": 0 }
+  ]
+}

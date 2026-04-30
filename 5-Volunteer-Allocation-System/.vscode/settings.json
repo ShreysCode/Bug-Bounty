@@ -1,0 +1,14 @@
+{
+  "python.analysis.ignore": [
+    "*"
+  ],
+  "python.analysis.typeCheckingMode": "off",
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+  "editor.parameterHints.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.hover.enabled": "off"
+}
